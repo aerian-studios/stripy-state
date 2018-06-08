@@ -31,9 +31,9 @@ export const App = withStore(
 
         updateOnlineStatus = () => {
             console.log("update status", navigator.onLine);
-            console.log(this.props.store);
+            // console.log(this.props.store);
             this.setOnline(navigator.onLine);
-            console.log(this.props.store);
+            // console.log(this.props.store);
         };
 
         loadContent = async () => {
@@ -103,7 +103,6 @@ export const App = withStore(
                         image={lightboxAnimal && lightboxAnimal.image_full}
                         lowRes={lightboxAnimal && lightboxAnimal.image_thumb}
                         onClick={this.closeLightbox}
-                        online={this.state.online}
                     />
                 </div>
             );

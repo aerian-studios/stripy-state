@@ -1,11 +1,9 @@
-import { connect, createStore } from "undux";
+import { connect, createStore, withLogger } from "undux";
 
-const store = createStore({
-    online: false
-});
-
-store
-    .on("online")
-    .subscribe(online => console.log("onlineness changed", online));
+const store = withLogger(
+    createStore({
+        online: false
+    })
+);
 
 export const withStore = connect(store);
