@@ -1,0 +1,12 @@
+[
+    {
+        "uuid": "about-us",
+        "type": "about-us",
+        "isPage": true,
+        "common_name": "About Stripey",
+        "description":
+            "<p>Stripes is the ultimate fansite for the appreciation of all things stripey.</p><p>Our aim is to enlighten, entertain and enquire about all things stripey&hellip; but especially about our stripey friends of the animal world and how we are impacting them.</p><p><a href=\"#\">Some place</a></p>",
+        "image_full":
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Equus_quagga_burchellii_-_Etosha%2C_2014.jpg/1920px-Equus_quagga_burchellii_-_Etosha%2C_2014.jpg"
+    }
+]

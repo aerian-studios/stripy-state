@@ -1,0 +1,8 @@
+.ListItem {
+    padding: 8px 10px;
+    display: block;
+}
+
+.selected {
+    font-weight: bold;
+}

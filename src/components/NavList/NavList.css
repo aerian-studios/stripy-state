@@ -1,0 +1,39 @@
+.Nav {
+    background-color: rgb(10, 50, 50);
+    height: 100%;
+    transition: transform 0.25s ease-out 0s;
+    position: relative;
+}
+
+@media (max-width: 37.5em) {
+    .Nav {
+        transform: translateY(-100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .Nav:focus,
+    .active {
+        transform: translateY(0);
+    }
+
+    .Nav::after {
+        content: "=";
+        font-size: 2em;
+        line-height: 1em;
+        padding: 8px;
+        position: absolute;
+        bottom: 0;
+        right: 3px;
+        background-color: rgb(10, 50, 50);
+        color: #fff;
+        border-radius: 3px;
+        transform: translateY(90%);
+    }
+}
+
+.NavItem {
+    color: #fff;
+}

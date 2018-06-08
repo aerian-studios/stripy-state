@@ -1,0 +1,38 @@
+[
+    {
+        "uuid": "c43b9239-b85d-4231-89f6-9239db989e6a",
+        "common_name": "Plains zebra",
+        "latin_name": "Equus quagga",
+        "description":
+            "The plains zebra is the most common and geographically widespread species of zebra. It ranges from the south of Ethiopia through East Africa to as far south as Botswana and eastern South Africa. The plains zebra remains common in game reserves, but is threatened by human activities such as hunting for its meat and hide, as well as competition with livestock and encroachment by farming on much of its habitat.",
+        "image_thumb":
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Equus_quagga_burchellii_-_Etosha%2C_2014.jpg/220px-Equus_quagga_burchellii_-_Etosha%2C_2014.jpg",
+        "image_full":
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Equus_quagga_burchellii_-_Etosha%2C_2014.jpg/1920px-Equus_quagga_burchellii_-_Etosha%2C_2014.jpg",
+        "conservation_status": "Near threatened"
+    },
+    {
+        "uuid": "a1bdd70a-ee89-48a2-af48-95af83380142",
+        "common_name": "Ring-tailed lemur",
+        "latin_name": "Lemur catta",
+        "description":
+            "The ring-tailed lemur is a large strepsirrhine primate and the most recognized lemur due to its long, black and white ringed tail. It belongs to Lemuridae, one of five lemur families, and is the only member of the Lemur genus. Like all lemurs it is endemic to the island of Madagascar. Known locally in Malagasy as maky or hira, it inhabits gallery forests to spiny scrub in the southern regions of the island. It is omnivorous and the most terrestrial of extant lemurs. The animal is diurnal, being active exclusively in daylight hours. The ring-tailed lemur is highly social, living in groups of up to 30 individuals. It is also female dominant, a trait common among lemurs. To keep warm and reaffirm social bonds, groups will huddle together. The ring-tailed lemur will also sunbathe, sitting upright facing its underside, with its thinner white fur towards the sun. Like other lemurs, this species relies strongly on its sense of smell and marks its territory with scent glands. The males perform a unique scent marking behavior called spur marking and will participate in stink fights by impregnating their tail with their scent and wafting it at opponents.",
+        "image_thumb":
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Lemur_catta_001.jpg/220px-Lemur_catta_001.jpg",
+        "image_full":
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Lemur_catta_001.jpg/2560px-Lemur_catta_001.jpg",
+        "conservation_status": "Endangered"
+    },
+    {
+        "uuid": "f7a287b0-7d23-472d-be22-999ea4163488",
+        "common_name": "European badger",
+        "latin_name": "Meles meles",
+        "description":
+            "The European badger is a powerfully built black, white, brown and grey animal with a small head, a stocky body, small black eyes and short tail. Its weight varies, being 7–13 kg (15–29 lb) in spring but building up to 15–17 kg (33–37 lb) in autumn before the winter sleep period. It is nocturnal and is a social, burrowing animal that sleeps during the day in one of several setts in its territorial range. These burrows, which may house several badger families, have extensive systems of underground passages and chambers and have multiple entrances. Some setts have been in use for decades. Badgers are very fussy over the cleanliness of their burrow, carrying in fresh bedding and removing soiled material, and they defecate in latrines strategically situated around their territory.",
+        "image_thumb":
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/M%C3%A4yr%C3%A4_%C3%84ht%C3%A4ri_4.jpg/220px-M%C3%A4yr%C3%A4_%C3%84ht%C3%A4ri_4.jpg",
+        "image_full":
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/M%C3%A4yr%C3%A4_%C3%84ht%C3%A4ri_4.jpg/1920px-M%C3%A4yr%C3%A4_%C3%84ht%C3%A4ri_4.jpg",
+        "conservation_status": "Least concern"
+    }
+]

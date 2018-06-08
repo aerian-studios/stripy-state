@@ -1,0 +1,14 @@
+.main {
+    max-width: 100%;
+    min-height: 100%;
+}
+
+@media (min-width: 37.5em) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        justify-content: stretch;
+        align-content: stretch;
+        grid-gap: 8px;
+    }
+}
