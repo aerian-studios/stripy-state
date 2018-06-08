@@ -6,3 +6,7 @@
 .selected {
     font-weight: bold;
 }
+
+.offline {
+    color: #ccc !important;
+}

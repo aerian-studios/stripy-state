@@ -9,17 +9,12 @@ import { PageDetail } from "./PageDetail/PageDetail";
 import "../theme/theme.css";
 import styles from "./App.css";
 
-// const navigatior =
-//     typeof window.navigator !== "undefined"
-//         ? window.navigator
-//         : { online: false };
-
 export default class App extends Component {
     state = {
         content: pages,
         selectedContent: pages[0],
         lightboxAnimal: null,
-        online: false
+        online: navigator && navigator.onLine
     };
 
     componentDidMount() {
@@ -90,6 +85,7 @@ export default class App extends Component {
                             content={content}
                             selectedContent={selectedContent}
                             onClick={this.chooseAnimal}
+                            online={this.state.online}
                         />
                     </div>
                     <div>{this.chooseRenderComponent(selectedContent)}</div>
