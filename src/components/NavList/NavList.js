@@ -28,6 +28,7 @@ export class NavList extends React.Component {
                             onClick={() => this.props.onClick(navItem)}
                             label={navItem.common_name}
                             contextStyles={styles.NavItem}
+                            online={this.props.online}
                         />
                     ))}
                 </ul>

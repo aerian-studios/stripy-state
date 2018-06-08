@@ -103,6 +103,7 @@ export const App = withStore(
                         image={lightboxAnimal && lightboxAnimal.image_full}
                         lowRes={lightboxAnimal && lightboxAnimal.image_thumb}
                         onClick={this.closeLightbox}
+                        online={this.state.online}
                     />
                 </div>
             );
