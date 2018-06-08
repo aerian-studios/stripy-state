@@ -9,16 +9,28 @@ import { PageDetail } from "./PageDetail/PageDetail";
 import "../theme/theme.css";
 import styles from "./App.css";
 
+// const navigatior =
+//     typeof window.navigator !== "undefined"
+//         ? window.navigator
+//         : { online: false };
+
 export default class App extends Component {
     state = {
         content: pages,
         selectedContent: pages[0],
-        lightboxAnimal: null
+        lightboxAnimal: null,
+        online: false
     };
 
     componentDidMount() {
+        window.addEventListener("online", this.updateOnlineStatus);
+        window.addEventListener("offline", this.updateOnlineStatus);
         this.loadContent();
     }
+
+    updateOnlineStatus = () => {
+        this.setState({ online: navigator.onLine });
+    };
 
     loadContent = async () => {
         const response = await fetch(
@@ -67,6 +79,11 @@ export default class App extends Component {
 
         return (
             <div>
+                <h1>
+                    {this.state.online
+                        ? "we're online people"
+                        : "we are offline now!"}
+                </h1>
                 <main className={styles.main}>
                     <div id="sidebar">
                         <NavList
