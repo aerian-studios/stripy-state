@@ -21,15 +21,27 @@ export const App = withStore(
         };
 
         componentDidMount() {
+            window.addEventListener("online", this.updateOnlineStatus);
+            window.addEventListener("offline", this.updateOnlineStatus);
+            this.updateOnlineStatus();
             this.loadContent();
         }
+
+        setOnline = this.props.store.set("online");
+
+        updateOnlineStatus = () => {
+            console.log("update status", navigator.onLine);
+            console.log(this.props.store);
+            this.setOnline(navigator.onLine);
+            console.log(this.props.store);
+        };
 
         loadContent = async () => {
             const response = await fetch(
                 "//api.jsonbin.io/b/5afc5c68c2e3344ccd96b97c/1"
             );
             const animals = await response.json();
-            const content = pages.concat(animals); //[...pages, ...animals];
+            const content = pages.concat(animals);
 
             if (content.length) {
                 this.setState({ content, selectedContent: content[0] });
@@ -71,6 +83,11 @@ export const App = withStore(
 
             return (
                 <div>
+                    <h1>
+                        {this.props.store.get("online")
+                            ? "we're online people"
+                            : "we are offline now!"}
+                    </h1>
                     <main className={styles.main}>
                         <div id="sidebar">
                             <NavList
