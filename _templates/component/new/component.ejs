@@ -2,12 +2,16 @@
 to: src/components/<%= h.inflection.undasherize(name) %>/<%= h.inflection.undasherize(name) %>.tsx
 ---
 <% const comp = h.inflection.undasherize(name) -%>
-import * as React from "react";
+<% if(locals.class) { -%>
+import { Component, h } from "preact";
+<% } else { %>
+import { FunctionalComponent, h } from "preact";
+<% } -%>
 
 import * as styles from "./<%= comp %>.scss";
 
 interface Props {
-    style?: React.CSSProperties;
+    style?: any;
 }
 <% if(locals.class) { -%>
 interface State {
@@ -18,20 +22,20 @@ const INITIAL_STATE: State = {
     myProp: true,
 };
 
-export class <%= comp %> extends React.PureComponent<Props, State> {
+export class <%= comp %> extends Component<Props, State> {
     public state = INITIAL_STATE;
 
     public render() {
         return (
-            <div className={styles.base} style={this.props.style}>
+            <div className={styles.component} style={this.props.style}>
                 {this.props.children}
             </div>
         );
     }
 }
 <% } else { %>
-export const <%= comp %>: React.SFC<Props> = ({ children, style }) => (
-    <div className={styles.base} style={style}>
+export const <%= comp %>: FunctionalComponent<Props> = ({ children, style }) => (
+    <div className={styles.component} style={style}>
         {children}
     </div>
 );
