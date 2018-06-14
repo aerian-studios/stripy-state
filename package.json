@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "modern-js-week-16",
+  "name": "stripy-typey",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -8,9 +8,21 @@
     "build": "preact build",
     "serve": "preact build && preact serve",
     "dev": "preact watch",
-    "lint": "eslint src",
-    "test": "jest",
+    "lint": "tslint --project src",
+    "test": "jest ./tests",
+    "precommit": "lint-staged",
     "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "lint-staged": {
+    "*.{js,jsx,css,md,scss}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "tslint --fix --project src",
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -27,20 +39,27 @@
     "src/tests/__mocks__/*"
   ],
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.5",
-    "@storybook/addon-storyshots": "^3.4.5",
+    "@types/jest": "^22.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-aerian": "^1.0.1",
+    "husky": "^0.14.3",
     "@storybook/react": "^3.4.5",
-    "eslint": "^4.9.0",
-    "eslint-config-aerian": "^1.0.3",
     "hygen-react-typescript": "^1.0.1",
     "identity-obj-proxy": "^3.0.0",
     "if-env": "^1.0.0",
-    "jest": "^21.2.1",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.1.0",
     "node-sass": "^4.9.0",
     "preact-cli": "^2.1.0",
     "preact-render-spy": "^1.2.1",
     "prettier": "^1.12.1",
-    "sass-loader": "^7.0.1"
+    "sass-loader": "^7.0.1",
+    "ts-jest": "^22.4.6",
+    "ts-loader": "3.5.0",
+    "tslint": "^5.10.0",
+    "tslint-config-aerian": "^1.0.2",
+    "typescript": "^2.8.3",
+    "typings-for-css-modules-loader": "^1.7.0"
   },
   "dependencies": {
     "preact": "^8.2.6",
@@ -50,6 +69,9 @@
     "undux": "^4.6.2"
   },
   "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
     "verbose": true,
     "setupFiles": [
       "<rootDir>/src/tests/__mocks__/browserMocks.js"
@@ -58,10 +80,16 @@
     "moduleFileExtensions": [
       "js",
       "jsx",
-      "json"
+      "json",
+      "ts",
+      "tsx"
     ],
     "moduleDirectories": [
       "node_modules"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)(spec|test).[jt]s?(x)"
     ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/tests/__mocks__/fileMock.js",
