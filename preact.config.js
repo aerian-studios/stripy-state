@@ -16,7 +16,10 @@ export default function(config, env, helpers) {
 
     config.module.loaders.push({
         test: /\.[tj]sx?$/,
-        loader: "ts-loader"
+        loader: "ts-loader",
+        options: {
+            transpileOnly: true
+        }
     });
 
     // Use any `index` file, not just index.js
